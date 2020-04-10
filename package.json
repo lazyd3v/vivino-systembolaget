@@ -1,0 +1,25 @@
+{
+  "name": "vivino-systembolaget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Roman Faizullin <roman@faizullin.info>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "scripts": {
+    "start:content": "parcel watch src/contentScript/contentScript.js -d public",
+    "start:bg": "parcel watch src/bgScript/bgScript.js -d public"
+  },
+  "dependencies": {
+    "axios": "0.18.1",
+    "axios-cache-adapter": "^2.5.0",
+    "axios-rate-limit": "^1.2.1",
+    "cheerio": "^1.0.0-rc.3",
+    "localforage": "^1.7.3",
+    "localforage-webextensionstorage-driver": "^1.2.1"
+  }
+}
