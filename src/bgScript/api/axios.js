@@ -22,6 +22,7 @@ export async function configureAxios() {
     responseType: "text",
     cache: {
       maxAge: 15 * 60 * 1000,
+      exclude: { query: false },
       store: forageStore,
     },
   });
