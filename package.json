@@ -20,6 +20,7 @@
     "axios-rate-limit": "^1.2.1",
     "cheerio": "^1.0.0-rc.3",
     "localforage": "^1.7.3",
-    "localforage-webextensionstorage-driver": "^1.2.1"
+    "localforage-webextensionstorage-driver": "^1.2.1",
+    "lodash": "^4.17.15"
   }
 }
