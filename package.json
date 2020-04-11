@@ -5,14 +5,19 @@
   "author": "Roman Faizullin <roman@faizullin.info>",
   "license": "MIT",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "parcel": "^1.12.4"
   },
   "browserslist": [
     "last 1 Chrome versions"
   ],
   "scripts": {
+    "start": "run-p start:*",
+    "build": "run-s build:*",
     "start:content": "parcel watch src/contentScript/contentScript.js -d public",
-    "start:bg": "parcel watch src/bgScript/bgScript.js -d public"
+    "start:bg": "parcel watch src/bgScript/bgScript.js -d public",
+    "build:content": "parcel build src/contentScript/contentScript.js -d public",
+    "build:bg": "parcel build src/bgScript/bgScript.js -d public"
   },
   "dependencies": {
     "axios": "0.18.1",
