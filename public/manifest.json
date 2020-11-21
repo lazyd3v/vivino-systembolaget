@@ -6,7 +6,7 @@
   "permissions": ["*://www.vivino.com/*", "unlimitedStorage", "activeTab"],
   "content_scripts": [
     {
-      "matches": ["https://beta.systembolaget.se/*"],
+      "matches": ["https://www.systembolaget.se/*"],
       "js": ["contentScript.js"]
     }
   ],

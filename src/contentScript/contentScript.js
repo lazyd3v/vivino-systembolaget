@@ -1,4 +1,5 @@
 import debounce from "lodash/debounce";
+import get from "lodash/get";
 import getRating from "./api/getRating";
 
 function initializeScript() {
@@ -30,17 +31,21 @@ function appendRatings() {
 
 async function appendRating(element) {
   element.parentElement.style.position = "relative";
-  const wineName = element.querySelector("h3").innerText;
+  const wineName = get(element.querySelector("h3"), "innerText");
+
+  if (!wineName) {
+    return;
+  }
 
   try {
     const { score, numOfReviews, url } = await getRating(wineName);
 
     const priceElement = document.createElement("a");
     priceElement.href = url;
-    priceElement.innerText = `Vivino score: ${score} (${numOfReviews} reviews)`;
+    priceElement.innerText = `Score: ${score} (${numOfReviews} reviews)`;
     priceElement.style.position = "absolute";
-    priceElement.style.bottom = "14px";
-    priceElement.style.right = "14px";
+    priceElement.style.bottom = "20px";
+    priceElement.style.right = "130px";
 
     element.parentElement.appendChild(priceElement);
   } catch (e) {
