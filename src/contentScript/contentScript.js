@@ -3,9 +3,9 @@ import get from "lodash/get";
 import getRating from "./api/getRating";
 
 function initializeScript() {
-  const shouldInititialize = window.location.search.includes(
-    "categoryLevel1=Vin"
-  );
+  const shouldInititialize =
+    window.location.search.includes("categoryLevel1=Vin") ||
+    window.location.href.includes("/sok/");
 
   if (!shouldInititialize) {
     return;
