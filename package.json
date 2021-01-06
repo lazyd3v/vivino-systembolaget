@@ -20,7 +20,7 @@
     "build:bg": "parcel build src/bgScript/bgScript.js -d public"
   },
   "dependencies": {
-    "axios": "0.18.1",
+    "axios": "0.21.1",
     "axios-cache-adapter": "^2.5.0",
     "axios-rate-limit": "^1.2.1",
     "cheerio": "^1.0.0-rc.3",
